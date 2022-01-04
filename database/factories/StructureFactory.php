@@ -14,7 +14,9 @@ class StructureFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'unit' => $this->faker->company(),
+            'division' => $this->faker->city(),
+            'facade' => $this->faker->companySuffix(),
         ];
     }
 }
