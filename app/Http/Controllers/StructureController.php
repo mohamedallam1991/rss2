@@ -14,6 +14,7 @@ class StructureController extends Controller
             'structures' => Structure::all(),
         ]));
     }
+
     public function show(Structure $structure)
     {
         return view('structures.show', with([
@@ -31,5 +32,10 @@ class StructureController extends Controller
     {
         Structure::create($request->validated());
         return redirect()->route('structures.index');
+    }
+
+    public function destroy(Structure $structure)
+    {
+        // return $structure->ds;
     }
 }
