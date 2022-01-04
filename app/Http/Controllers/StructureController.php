@@ -36,6 +36,6 @@ class StructureController extends Controller
 
     public function destroy(Structure $structure)
     {
-        // return $structure->ds;
+        // return $structure->ds::;
     }
 }

@@ -77,17 +77,17 @@
             <div class="grid grid-cols-6 gap-6">
               <div class="col-span-6 sm:col-span-3">
                 <label for="unit" class="block text-sm font-medium text-gray-700">Unit</label>
-                <input required type="text" name="unit" id="unit" autocomplete="unit" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                <input required type="text" name="unit" id="unit" autocomplete="unit" value="{{ old('unit') }}" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
               </div>
 
               <div class="col-span-6 sm:col-span-3">
                 <label for="division" class="block text-sm font-medium text-gray-700">Division</label>
-                <input required type="text" name="division" id="division" autocomplete="division" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                <input required type="text" name="division" id="division" autocomplete="division" value="{{ old('division') }}" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
               </div>
 
               <div class="col-span-6 sm:col-span-4">
                 <label for="facade" class="block text-sm font-medium text-gray-700">Facade</label>
-                <input required type="text" name="facade" id="facade" autocomplete="facade" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                <input required type="text" name="facade" id="facade" autocomplete="facade" value="{{ old('facade') }}" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
               </div>
             </div>
           </div>
