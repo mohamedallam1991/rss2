@@ -31,7 +31,7 @@ class StructureController extends Controller
     public function store(StoreStructureRequest $request)
     {
         Structure::create($request->validated());
-        return redirect()->route('structures.index');
+        return redirect()->route('structures.index')->with('message', 'strucutre updated!');
     }
 
     public function destroy(Structure $structure)

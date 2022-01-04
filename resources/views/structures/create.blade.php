@@ -78,28 +78,28 @@
               <div class="col-span-6 sm:col-span-3">
                 <label for="unit" class="block text-sm font-medium text-gray-700">Unit</label>
                 <input required type="text" name="unit" id="unit" autocomplete="unit" value="{{ old('unit') }}" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                @error('unit')
+                    <div class="font-bold text-red-500">{{ $message }}</div>
+                @enderror
               </div>
 
               <div class="col-span-6 sm:col-span-3">
                 <label for="division" class="block text-sm font-medium text-gray-700">Division</label>
                 <input required type="text" name="division" id="division" autocomplete="division" value="{{ old('division') }}" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-              </div>
+                @error('division')
+                    <div class="font-bold text-red-500">{{ $message }}</div>
+                @enderror
+            </div>
 
               <div class="col-span-6 sm:col-span-4">
                 <label for="facade" class="block text-sm font-medium text-gray-700">Facade</label>
                 <input required type="text" name="facade" id="facade" autocomplete="facade" value="{{ old('facade') }}" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-              </div>
+                @error('facade')
+                    <div class="font-bold text-red-500">{{ $message }}</div>
+                @enderror
+            </div>
             </div>
           </div>
-            @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
           <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
             <button type="submit" class="bg-indigo-600 border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex justify-center text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
               Save

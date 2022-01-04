@@ -7,8 +7,15 @@
   The alpine.js code is *NOT* production ready and is included to preview
   possible interactivity
 -->
-<div class="bg-gray-100 py-8">
+<div class="bg-gray-700 pl-32 py-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div>
+        @if (session()->has('message'))
+            <div class="font-bold text-green-500">
+                {{ session('message') }}
+            </div>
+        @endif
+    </div>
 
   <ul role="list" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
